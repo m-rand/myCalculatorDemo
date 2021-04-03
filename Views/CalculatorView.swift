@@ -19,7 +19,7 @@ struct CalculatorView: View {
     ]
     
     func onButtonTap(exp: String) -> () {
-        calcLogic.addExpression(exp: exp.first!)
+        calcLogic.apply(what: exp.first!)
     }
     
     var body: some View {
@@ -55,7 +55,7 @@ extension CalculatorView {
             ("4", "", "4"),
             ("5", "", "5"),
             ("6", "", "6"),
-            ("", "multiply.circle", "x"),
+            ("", "multiply.circle", "*"),
             ("7", "", "7"),
             ("8", "", "8"),
             ("9", "", "9"),
